@@ -12,7 +12,7 @@ A lightweight offline ToDo / Plan HTML page. The main page is `todo.html`. No se
 
 ## 状态 / Repository status
 
-- 语言：HTML（仓库语言统计显示 100% HTML）
+- 语言：HTML
 - 主页面：`todo.html`
 - 包含文件：`README.md`, `LICENSE`, `todo.html`
 
