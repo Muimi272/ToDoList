@@ -1,121 +1,117 @@
 # ToDoList / 计划控制器
 
-简短描述（中文）
-本项目是一个基于静态 HTML 的离线计划/代办管理器，旨在帮助用户在浏览器中创建、查看和管理简单任务列表（无需在线服务器）。
+简要说明（中文）
+
+这是一个基于静态 HTML 的离线代办/计划页面。主页面为 `todo.html`，无需服务器：直接在浏览器中打开即可使用。仓库采用 MIT 许可证（详见 LICENSE 文件）。
 
 Short description (English)
-A lightweight offline Plan/ToDo controller built with static HTML to help users create, view, and manage simple task lists directly in the browser (no online server required).
+
+A lightweight offline ToDo / Plan HTML page. The main page is `todo.html`. No server required — open it in your browser. This repository is licensed under the MIT License (see the LICENSE file).
 
 ---
 
-## 主要功能 / Features
+## 状态 / Repository status
 
-- 添加、编辑与删除任务（视项目实现而定）
-- 标记任务为完成/未完成
-- 离线使用（打开 HTML 文件即可运行）
-- 轻量、零依赖（纯前端，适合静态托管）
+- 语言：HTML（仓库语言统计显示 100% HTML）
+- 主页面：`todo.html`
+- 包含文件：`README.md`, `LICENSE`, `todo.html`
+
+---
+
+## 快速开始 / Quick start
+
+中文：
+1. 克隆或下载仓库：
+   ```bash
+   git clone https://github.com/Muimi272/ToDoList.git
+   ```
+2. 进入仓库并在浏览器中打开主页面：
+   - 打开 `todo.html`（双击文件或通过浏览器的“打开文件”）。
+3. 若页面包含 JavaScript 并使用 `localStorage`，任务会保存在本地浏览器（不会上传网络）。
+
+English:
+1. Clone or download the repo:
+   ```bash
+   git clone https://github.com/Muimi272/ToDoList.git
+   ```
+2. Open the project folder and open the main page in your browser:
+   - Open `todo.html` (double-click or use your browser's File > Open).
+3. If the page uses JavaScript with `localStorage`, tasks are stored locally in the browser (no network upload).
+
+---
+
+## 功能 / Features
+
+- 在浏览器中添加、查看与管理任务（视 `todo.html` 的实现而定）
+- 离线可用：无需后端，适合静态托管
+- 轻量、零依赖：纯前端，无构建步骤
 
 Features (English)
 
-- Add, edit and delete tasks (depending on implementation)
-- Mark tasks as completed/uncompleted
-- Offline usage — open the HTML file in a browser to run
-- Lightweight, zero-dependency (pure front-end, suitable for static hosting)
+- Add, view and manage tasks in the browser (depending on `todo.html` implementation)
+- Offline usage — no backend required
+- Lightweight and zero-dependency: pure front-end, no build step
 
 ---
 
-## 运行与安装 / Running & Installation
+## 使用示例 / Usage example
 
 中文：
-1. 下载或克隆仓库：
-   git clone https://github.com/Muimi272/ToDoList.git
-2. 进入仓库目录并在浏览器中打开主页面（例如 index.html）：
-   - 直接双击 index.html，或在浏览器中用“打开文件”功能打开。
-3. 若包含 JavaScript 且使用了 localStorage，数据会保存在本地浏览器中（不会上传到网络）。
+- 在页面中输入任务标题或描述，点击“添加”或对应按钮将任务加入列表。
+- 使用页面提供的编辑/删除控件修改或移除任务。
+- 如果页面提供复选框或状态按钮，可用于标记任务完成/未完成。
 
 English:
-1. Clone or download the repository:
-   git clone https://github.com/Muimi272/ToDoList.git
-2. Open the project directory and open the main page (e.g. index.html) in your browser:
-   - Double-click index.html or use your browser’s “Open File” option.
-3. If JavaScript with localStorage is included, data will be stored locally in the browser (no network upload).
+- Enter a task title/description and click the Add button (or equivalent) to add it to the list.
+- Use edit/delete controls provided on the page to modify or remove tasks.
+- Use any checkbox or status control to mark tasks complete/incomplete.
 
 ---
 
-## 使用示例 / Usage Examples
+## 项目结构（当前） / Project structure (current)
 
-中文：
-- 在页面中输入任务标题 / 描述，点击“添加”或对应按钮将任务加入列表。
-- 点击任务旁的编辑/删除按钮进行修改或删除。
-- 点击复选框或“完成”按钮标记任务状态。
-
-English:
-- Enter a task title/description on the page and click the "Add" (or equivalent) button to add it to the list.
-- Use edit/delete buttons next to a task to modify or remove it.
-- Use the checkbox or "Complete" button to toggle task status.
+- todo.html — 主页面（Main page）
+- README.md — 项目说明（本文件）
+- LICENSE — 许可证文件（MIT）
 
 ---
 
-## 项目结构（示例） / Project Structure (example)
+## 建议改进 / Suggested improvements
 
-- index.html — 主页面
-- assets/ — 图片与静态资源（若存在）
-- css/ — 样式文件（若存在）
-- js/ — 行为脚本（若存在）
-
-Project structure (example)
-
-- index.html — main page
-- assets/ — images & static assets (if any)
-- css/ — stylesheets (if any)
-- js/ — scripts (if any)
-
----
-
-## 建议改进（可选） / Suggested enhancements
-
-- 增加任务分类（标签/优先级/截止日期）
-- 使用 localStorage 或 IndexedDB 实现持久化（如尚未实现）
-- 美化界面并增加响应式布局以适配移动端
-- 增加导入/导出（JSON/CSV）功能以便备份数据
-- 若需要多人协作或云同步，可考虑引入后端或使用第三方存储服务
-
-Suggested enhancements
-
-- Add task categories (tags/priority/due dates)
-- Use localStorage or IndexedDB for persistence if not implemented
-- Improve UI and add responsive layout for mobile
-- Add import/export (JSON/CSV) for backups
-- For multi-user sync, consider adding a backend or third-party storage
+- 若未实现持久化：使用 `localStorage` 或 `IndexedDB` 保存任务
+- 增加任务元数据：截止日期、优先级、标签/分类
+- 响应式样式以适配移动端
+- 导入/导出（JSON/CSV）以便备份
+- 若需要多人同步：考虑添加后端或使用第三方云同步服务
 
 ---
 
 ## 贡献 / Contributing
 
-欢迎提交 issue 或 pull request。请在 PR 中描述你的修改内容与目的，并保持变更小且易于审查。
+欢迎提交 issue 或 pull request。请在 PR 中说明修改内容与验证步骤，保持改动小且易审阅。
 
 Contributing
 
-Feel free to open issues or submit pull requests. Describe your changes and reasons in the PR and keep changes small and reviewable.
+Feel free to open issues or submit pull requests. Explain your changes and verification steps in the PR and keep changes small and reviewable.
 
 ---
 
 ## 许可证 / License
 
-请在此处填写许可证信息（如 MIT、Apache-2.0 等）。如果你还没有决定，推荐使用 MIT 许可证（宽松且常用）。
+本项目采用 MIT 许可证 — 详见 LICENSE 文件。
 
 License
 
-Add your license here (e.g. MIT, Apache-2.0). If undecided, MIT is a common permissive choice.
+This project is licensed under the MIT License — see the LICENSE file for details.
 
 ---
 
 ## 联系 / Contact
 
-作者: Muimi272  
+作者: Muimi272
 仓库: https://github.com/Muimi272/ToDoList
 
 Contact
 
-Author: Muimi272  
+Author: Muimi272
 Repo: https://github.com/Muimi272/ToDoList
